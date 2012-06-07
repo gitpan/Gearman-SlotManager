@@ -1,10 +1,10 @@
 package Gearman::SlotWorker;
+use namespace::autoclean;
 
 # ABSTRACT: A worker launched by Slot
 
-our $VERSION = '0.001'; # VERSION
+our $VERSION = '0.002'; # VERSION
 use Devel::GlobalDestruction;
-use namespace::autoclean;
 use Log::Log4perl qw(:easy);
 Log::Log4perl->easy_init($ERROR);
 
@@ -162,8 +162,6 @@ sub DEMOLISH{
     $self->unregister() if $self->worker;
     DEBUG __PACKAGE__." DEMOLISHED";
 }
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 # class member
 sub Loop{
@@ -183,6 +181,8 @@ sub Loop{
     $cv->recv;
 }
 
+__PACKAGE__->meta->make_immutable;
+
 1;
 
 
@@ -195,7 +195,7 @@ Gearman::SlotWorker - A worker launched by Slot
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 

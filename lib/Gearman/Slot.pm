@@ -1,9 +1,10 @@
 package Gearman::Slot;
 
+use namespace::autoclean;
+
 use Devel::GlobalDestruction;
 # ABSTRACT: Slot class
-our $VERSION = '0.001'; # VERSION
-use namespace::autoclean;
+our $VERSION = '0.002'; # VERSION
 use Log::Log4perl qw(:easy);
 Log::Log4perl->easy_init($ERROR);
 
@@ -111,7 +112,7 @@ Gearman::Slot - Slot class
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 AUTHOR
 

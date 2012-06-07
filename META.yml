@@ -4,16 +4,11 @@ author:
   - 'HyeonSeung Kim <sng2nara@hanmail.net>'
 build_requires:
   Exporter: 0
-  Gear: 0
   Gearman::Client: 0
   JSON: 0
-  Moose: 0
-  MooseX::Role::Pluggable: 0
-  MooseX::Role::Pluggable::Plugin: 0
   POSIX: 0
   Storable: 0
   Test::More: 0
-  TestWorker: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
@@ -39,4 +34,4 @@ requires:
 resources:
   homepage: https://github.com/sng2c/Gearman-SlotManager
   repository: git://github.com/sng2c/Gearman-SlotManager.git
-version: 0.001
+version: 0.002

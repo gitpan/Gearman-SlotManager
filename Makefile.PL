@@ -13,16 +13,11 @@ my %WriteMakefileArgs = (
   "AUTHOR" => "HyeonSeung Kim <sng2nara\@hanmail.net>",
   "BUILD_REQUIRES" => {
     "Exporter" => 0,
-    "Gear" => 0,
     "Gearman::Client" => 0,
     "JSON" => 0,
-    "Moose" => 0,
-    "MooseX::Role::Pluggable" => 0,
-    "MooseX::Role::Pluggable::Plugin" => 0,
     "POSIX" => 0,
     "Storable" => 0,
-    "Test::More" => 0,
-    "TestWorker" => 0
+    "Test::More" => 0
   },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
@@ -45,7 +40,7 @@ my %WriteMakefileArgs = (
     "Scalar::Util" => 0,
     "namespace::autoclean" => 0
   },
-  "VERSION" => "0.001",
+  "VERSION" => "0.002",
   "test" => {
     "TESTS" => "t/*.t"
   }

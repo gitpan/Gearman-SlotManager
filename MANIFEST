@@ -15,11 +15,8 @@ t/02-Slot.t
 t/03-SlotOverwork.t
 t/04-SlotManager.t
 t/05-SlotManagerWork.t
-t/Gear.pm
-t/TestWorker.pm
-t/etc/Manager.pm
-t/etc/Worker/Test.pm
-t/etc/Worker/Test2.pm
+t/lib/Gear.pm
+t/lib/TestWorker.pm
 t/run.pl
 t/run.sh
 t/testClient.pl
