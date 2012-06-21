@@ -1,6 +1,12 @@
 Revision History for Gearman-SlotManager
 ========================================
 
+v0.1 2012-06-21
+---------------
+
+2012-06-21 21:07:26 +0900  upto v0.1
+2012-06-21 21:06:26 +0900  Change worker to using Gearman::Client;
+
 v0.002 2012-06-07
 -----------------
 

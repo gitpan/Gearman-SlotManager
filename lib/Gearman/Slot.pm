@@ -4,7 +4,7 @@ use namespace::autoclean;
 
 use Devel::GlobalDestruction;
 # ABSTRACT: Slot class
-our $VERSION = '0.002'; # VERSION
+our $VERSION = '0.1'; # VERSION
 use Log::Log4perl qw(:easy);
 Log::Log4perl->easy_init($ERROR);
 
@@ -46,7 +46,7 @@ sub stop{
     my $self = shift;
     $self->is_stopped(1);
     if( $self->worker_pid ){
-        kill 2, $self->worker_pid;
+        kill INT => $self->worker_pid;
     }
 }
 
@@ -112,7 +112,7 @@ Gearman::Slot - Slot class
 
 =head1 VERSION
 
-version 0.002
+version 0.1
 
 =head1 AUTHOR
 
