@@ -34,4 +34,4 @@ requires:
 resources:
   homepage: https://github.com/sng2c/Gearman-SlotManager
   repository: git://github.com/sng2c/Gearman-SlotManager.git
-version: 0.1
+version: 0.2

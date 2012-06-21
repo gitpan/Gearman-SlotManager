@@ -3,7 +3,7 @@ use namespace::autoclean;
 
 # ABSTRACT: A worker launched by Slot
 
-our $VERSION = '0.1'; # VERSION
+our $VERSION = '0.2'; # VERSION
 use Devel::GlobalDestruction;
 use Log::Log4perl qw(:easy);
 #Log::Log4perl->easy_init($DEBUG);
@@ -57,11 +57,6 @@ sub BUILD{
         }
     }
     
-    $SIG{INT} = sub{
-        $self->stop_safe('SIGINT');
-        exit;
-    };
-
     $self->register();
     weaken($self);
 }
@@ -156,12 +151,18 @@ sub DEMOLISH{
 
 # class member
 sub Loop{
+
     my $class = shift;
     die 'Use like PACKAGE->Loop(%opts).' unless $class;
     die 'You need to use your own class extending '. __PACKAGE__ .'!' if $class eq __PACKAGE__;
     my %opt = @_;
 
     my $worker;
+    $SIG{INT} = sub{
+        $worker->stop_safe('SIGINT');
+        exit;
+    };
+
 
     eval{
         $worker = $class->new(%opt);
@@ -186,7 +187,7 @@ Gearman::SlotWorker - A worker launched by Slot
 
 =head1 VERSION
 
-version 0.1
+version 0.2
 
 =head1 SYNOPSIS
 
