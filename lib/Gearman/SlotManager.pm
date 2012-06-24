@@ -1,6 +1,6 @@
 package Gearman::SlotManager;
 # ABSTRACT: Managing Worker's lifecycle with Slots
-our $VERSION = '0.2'; # VERSION
+our $VERSION = '0.3'; # VERSION
 use namespace::autoclean;
 use Devel::GlobalDestruction;
 use Log::Log4perl qw(:easy);
@@ -10,7 +10,6 @@ use Data::Dumper;
 use Any::Moose;
 
 use AnyEvent;
-use EV;
 use AnyEvent::HTTPD;
 use Scalar::Util qw(weaken);
 
@@ -167,7 +166,7 @@ Gearman::SlotManager - Managing Worker's lifecycle with Slots
 
 =head1 VERSION
 
-version 0.2
+version 0.3
 
 =head1 SYNOPSIS
 

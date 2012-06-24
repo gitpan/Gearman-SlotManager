@@ -3,7 +3,7 @@ use namespace::autoclean;
 
 # ABSTRACT: A worker launched by Slot
 
-our $VERSION = '0.2'; # VERSION
+our $VERSION = '0.3'; # VERSION
 use Devel::GlobalDestruction;
 use Log::Log4perl qw(:easy);
 #Log::Log4perl->easy_init($DEBUG);
@@ -187,7 +187,7 @@ Gearman::SlotWorker - A worker launched by Slot
 
 =head1 VERSION
 
-version 0.2
+version 0.3
 
 =head1 SYNOPSIS
 

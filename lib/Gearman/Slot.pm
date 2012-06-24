@@ -4,7 +4,7 @@ use namespace::autoclean;
 
 use Devel::GlobalDestruction;
 # ABSTRACT: Slot class
-our $VERSION = '0.2'; # VERSION
+our $VERSION = '0.3'; # VERSION
 use Log::Log4perl qw(:easy);
 Log::Log4perl->easy_init($ERROR);
 
@@ -112,7 +112,7 @@ Gearman::Slot - Slot class
 
 =head1 VERSION
 
-version 0.2
+version 0.3
 
 =head1 AUTHOR
 

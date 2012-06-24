@@ -25,7 +25,7 @@ requires:
   AnyEvent::HTTPD: 0
   Data::Dumper: 0
   Devel::GlobalDestruction: 0
-  EV: 0
+  Gearman::Server: 0
   Gearman::Worker: 0
   LWP::Simple: 0
   Log::Log4perl: 0
@@ -34,4 +34,4 @@ requires:
 resources:
   homepage: https://github.com/sng2c/Gearman-SlotManager
   repository: git://github.com/sng2c/Gearman-SlotManager.git
-version: 0.2
+version: 0.3
